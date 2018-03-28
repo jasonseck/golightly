@@ -138,9 +138,9 @@ const styles= {
   },
   image: {width:'100%'},
   shuffle_button :{
-    width:'60px',
-    height:'60px',
-    borderRadius:'30px',
+    width:'44px',
+    height:'44px',
+    borderRadius:'22px',
     background:'#72adc3',
     display:'flex',
     alignItems:'center',
