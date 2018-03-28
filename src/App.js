@@ -6,6 +6,8 @@ var _ = require('lodash');
 const image_list = ["_M2A6799.JPG","_M2A6831.JPG","_M2A6861.JPG","_M2A6898.JPG","_M2A6800.JPG","_M2A6832.JPG","_M2A6862.JPG","_M2A6899.JPG","_M2A6801.JPG","_M2A6833.JPG","_M2A6863.JPG","_M2A6900.JPG","_M2A6802.JPG","_M2A6834.JPG","_M2A6864.JPG","_M2A6901.JPG","_M2A6803.JPG","_M2A6835.JPG","_M2A6865.JPG","_M2A6902.JPG","_M2A6774.JPG","_M2A6804.JPG","_M2A6836.JPG","_M2A6866.JPG","_M2A6903.JPG","_M2A6775.JPG","_M2A6805.JPG","_M2A6837.JPG","_M2A6867.JPG","_M2A6904.JPG","_M2A6776.JPG","_M2A6806.JPG","_M2A6838.JPG","_M2A6868.JPG","_M2A6905.JPG","_M2A6777.JPG","_M2A6807.JPG","_M2A6840.JPG","_M2A6869.JPG","_M2A6906.JPG","_M2A6778.JPG","_M2A6808.JPG","_M2A6841.JPG","_M2A6870.JPG","_M2A6907.JPG","_M2A6779.JPG","_M2A6809.JPG","_M2A6842.JPG","_M2A6871.JPG","_M2A6908.JPG","_M2A6780.JPG","_M2A6810.JPG","_M2A6843.JPG","_M2A6872.JPG","_M2A6909.JPG","_M2A6781.JPG","_M2A6811.JPG","_M2A6844.JPG","_M2A6873.JPG","_M2A6910.JPG","_M2A6782.JPG","_M2A6813.JPG","_M2A6845.JPG","_M2A6874.JPG","_M2A6911.JPG","_M2A6783.JPG","_M2A6814.JPG","_M2A6846.JPG","_M2A6875.JPG","_M2A6912.JPG","_M2A6784.JPG","_M2A6817.JPG","_M2A6847.JPG","_M2A6876.JPG","_M2A6913.JPG","_M2A6786.JPG","_M2A6818.JPG","_M2A6848.JPG","_M2A6881.JPG","_M2A6914.JPG","_M2A6787.JPG","_M2A6819.JPG","_M2A6849.JPG","_M2A6882.JPG","_M2A6915.JPG","_M2A6788.JPG","_M2A6820.JPG","_M2A6850.JPG","_M2A6884.JPG","_M2A6916.JPG","_M2A6789.JPG","_M2A6821.JPG","_M2A6851.JPG","_M2A6885.JPG","_M2A6917.JPG","_M2A6790.JPG","_M2A6822.JPG","_M2A6852.JPG","_M2A6886.JPG","_M2A6918.JPG","_M2A6791.JPG","_M2A6823.JPG","_M2A6853.JPG","_M2A6887.JPG","_M2A6919.JPG","_M2A6792.JPG","_M2A6824.JPG","_M2A6854.JPG","_M2A6888.JPG","_M2A6920.JPG","_M2A6793.JPG","_M2A6825.JPG","_M2A6855.JPG","_M2A6889.JPG","_M2A6921.JPG","_M2A6794.JPG","_M2A6826.JPG","_M2A6856.JPG","_M2A6890.JPG","_M2A6922.JPG","_M2A6795.JPG","_M2A6827.JPG","_M2A6857.JPG","_M2A6891.JPG","_M2A6923.JPG","_M2A6796.JPG","_M2A6828.JPG","_M2A6858.JPG","_M2A6892.JPG","_M2A6797.JPG","_M2A6859.JPG","_M2A6895.JPG","_M2A6798.JPG","_M2A6830.JPG","_M2A6860.JPG","_M2A6897.JPG"];
 
 const alt_image_list = ["_M2A6779.JPG", "_M2A6874.JPG", "_M2A6898.JPG", "_M2A6847.JPG", "_M2A6911.JPG", "_M2A6848.JPG", "_M2A6823.JPG", "_M2A6886.JPG", "_M2A6813.JPG", "_M2A6777.JPG", "_M2A6858.JPG", "_M2A6787.JPG", "_M2A6782.JPG"];
+const base_set = ["_M2A6876.JPG", "_M2A6873.JPG", "_M2A6881.JPG", "_M2A6914.JPG", "_M2A6866.JPG", "_M2A6860.JPG", "_M2A6780.JPG", "_M2A6888.JPG", "_M2A6779.JPG", "_M2A6810.JPG", "_M2A6817.JPG", "_M2A6801.JPG", "_M2A6778.JPG", "_M2A6784.JPG", "_M2A6920.JPG", "_M2A6915.JPG", "_M2A6797.JPG", "_M2A6905.JPG", "_M2A6841.JPG", "_M2A6911.JPG", "_M2A6796.JPG", "_M2A6834.JPG", "_M2A6818.JPG", "_M2A6902.JPG", "_M2A6782.JPG", "_M2A6844.JPG", "_M2A6811.JPG", "_M2A6806.JPG", "_M2A6799.JPG", "_M2A6813.JPG", "_M2A6923.JPG", "_M2A6908.JPG", "_M2A6852.JPG", "_M2A6870.JPG", "_M2A6886.JPG", "_M2A6869.JPG", "_M2A6872.JPG", "_M2A6895.JPG", "_M2A6922.JPG", "_M2A6913.JPG", "_M2A6809.JPG", "_M2A6821.JPG", "_M2A6800.JPG", "_M2A6847.JPG", "_M2A6855.JPG", "_M2A6907.JPG", "_M2A6900.JPG", "_M2A6798.JPG"];
+
 const titles = [
   "The Cashmere Watchcap",
   "The Poncho",
@@ -85,12 +87,12 @@ class App extends Component {
             ))}
           </ul>
           </div>
-          <div style={styles.image_container}>
+          <div style={styles.container}>
             <div style={styles.fix}>
               <div style={styles.shuffle_button} onClick={()=>{this.shuffle()}}>S</div>
               <div style={styles.shuffle_button} onClick={()=>{this.reload()}}>R</div>
             </div>
-            <div style={styles.container}>
+            <div style={styles.image_container}>
             {this.state.images.map((image,index)=>(
               <div key={index} style={styles.item}>
                 <img style={styles.image} src={"/images/" + image}/>
@@ -112,12 +114,18 @@ class App extends Component {
   }
 }
 const styles= {
-  container: {
+  container : {
+    marginTop:'150px'
+  },
+  image_container: {
     width:'100%',
-    maxWidth:'1200px',
-
+    maxWidth:'1000px',
     margin:'auto',
     padding:'0px',
+  },
+  filter: {
+    width:'300px',
+    float:'left',
   },
   item:{
     width:'23%',
@@ -172,9 +180,6 @@ const styles= {
     zIndex:'9999',
     background:'white',
     opacity:'.9'
-  },
-  image_container : {
-    marginTop:'150px'
   },
   menu : {
     listStyle:'none',
