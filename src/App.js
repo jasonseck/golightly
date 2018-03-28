@@ -170,7 +170,8 @@ const styles= {
     height:'140px',
     borderBottom:'1px solid #dedede',
     zIndex:'9999',
-    background:'white'
+    background:'white',
+    opacity:'.9'
   },
   image_container : {
     marginTop:'150px'
