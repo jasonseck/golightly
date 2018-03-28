@@ -47,7 +47,7 @@ class App extends Component {
   }
   reload() {
     this.setState({
-      images: _.shuffle(image_list)
+      images: _.sampleSize(image_list,28)
     })
   }
   listfiles() {
@@ -107,7 +107,7 @@ class App extends Component {
   componentWillMount() {
     console.log('mount');
     this.setState({
-      images: _.shuffle(image_list)
+      images: _.sampleSize(image_list, 28)
     })
   }
 }
